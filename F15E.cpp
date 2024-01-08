@@ -135,7 +135,7 @@ void AF15E::BeginPlay()
 	//---------------60 Times Per Sec Tick--------------------------//
 	
 	OnceTimer(CaptiveTickTimer, CaptiveTick(); , true, 0.0166f, 0);
-	//---------------Add Jet Sound------------------------------//
+
 
 	GroundCheckOverlap();
 }
@@ -149,6 +149,8 @@ void AF15E::Tick(float DeltaTime)
 
 void AF15E::CPP_Possessed()
 {
+	//----------------------When someone gets in the Jet--------------------//
+	
 	if (this == UGameplayStatics::GetPlayerPawn(GetWorld(), 0))
 	{
 		//----------------Setting Input------------------------//
